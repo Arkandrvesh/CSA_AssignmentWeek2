@@ -19,126 +19,179 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-    <!--Main Navigation-->
-<header>
+    <header>
+        <div class="p-5 bg-light mb-4">
+          <h1 class="">Book List Library</h1>
+          <nav class="d-flex">
+            <h6 class="mb-0">
+              <a href="index.html" class="text-reset">Home</a>
+              <span>/</span>
+              <a href="About.html" class="text-reset">About</a>
+              <span>/</span>
+              <a href="Books.html" class="text-reset">Book List</a>
+            </h6>
+          </nav>
+          <img src="sman11jktlogo.png" alt="Logo SMAN 11 Jakarta" class="logo">
+        </div>
+    </header>
 
-    <!-- Navbar -->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-  
-        <!-- Search form -->
-        <form class="d-none d-md-flex input-group w-auto my-auto">
-          <input autocomplete="off" type="search" class="form-control rounded" placeholder='Search (ctrl + "/" to focus)'
-            style="min-width: 225px" />
-          <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-        </form>
-  
-        <!-- Right links -->
-        <ul class="navbar-nav ms-auto d-flex flex-row">
-          <!-- Notification dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-bell"></i>
-              <span class="badge rounded-pill badge-notification bg-danger">1</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Some news</a></li>
-              <li><a class="dropdown-item" href="#">Another news</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-  
-          <!-- Icon dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
-              data-mdb-toggle="dropdown" aria-expanded="false">
-              <i class="flag-united-kingdom flag m-0"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English
-                  <i class="fa fa-check text-success ms-2"></i></a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-              </li>
-            </ul>
-          </li>
-  
-          <!-- Avatar -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
-              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="22" alt="Avatar"
-                loading="lazy" />
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">My profile</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
-  
-    <!-- Heading -->
-    <div class="p-5 bg-light mb-4">
-      <h1 class="">SMAN 11 Library</h1>
-      <!-- Breadcrumb -->
-      <nav class="d-flex">
-        <h6 class="mb-0">
-          <a href="index.html" class="text-reset">Home</a>
-          <span>/</span>
-          <a href="About.html" class="text-reset">About</a>
-          <span>/</span>
-          <a href="Books.html" class="text-reset"><u>Books</u></a>
-        </h6>
-      </nav>
-      <!-- Breadcrumb -->
-    </div>
-    <!-- Heading -->
-  </header>
-  <!--Main Navigation-->
+<!-- Main -->
 
-<!-- Bebas Mas Anggun isi -->
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'History')">History</button>
+  <button class="tablinks" onclick="openCity(event, 'Educational')">Educational</button>
+  <button class="tablinks" onclick="openCity(event, 'Biography')">Biography</button>
+  <button class="tablinks" onclick="openCity(event, 'Biology')">Biology</button>
+</div>
 
+<!-- Tab content -->
+<div id="History" class="tabcontent">
+  <table>
+    <tr>
+      <th>Book Title</th>
+      <th>Bookshlef Number</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td><b>1776</b> by David McCullough</td>
+      <td>B-17</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>The Gun of August</td>
+      <td>B-17</td>
+      <td>Not Available</td>
+    </tr>
+    <tr>
+      <td>Krakatoa: The Day the World Exploded: August 27, 1883</td>
+      <td>B-17</td>
+      <td>Not Available</td>
+    </tr>
+    <tr>
+      <td>A Few Hidden Truths: Islam and Indonesian Democracy in The Age of Terror</td>
+      <td>B-17</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>A Fragile Nation:<b></b> The Indonesian Crisis</td>
+      <td>B-17</td>
+      <td>Not Available</td>
+    </tr>
+  </table> 
+</div> 
 
+<div id="Educational" class="tabcontent">
+  <table>
+    <tr>
+      <th>Book Title</th>
+      <th>Bookshlef Number</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td><b>Invaluable Master:</b> the 10 Skills You Need to Skyrocket Your Career</td>
+      <td>A-10</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Educated a Memoir</td>
+      <td>A-10</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>The Privileged Poor</td>
+      <td>A-10</td>
+      <td>Not Available</td>
+    </tr>
+    <tr>
+      <td>Psikologi Pendidikan</td>
+      <td>A-10</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td><b>Mindset:</b> The New Psychology of Success</td>
+      <td>A-10</td>
+      <td>Not Available</td>
+    </tr>
+  </table> 
+</div>
 
-<!-- Akhir dari isi -->
+<div id="Biography" class="tabcontent">
+  <table>
+    <tr>
+      <th>Book Title</th>
+      <th>Bookshlef Number</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td><b>Alex Ferguson,</b> Autobiografi Saya</td>
+      <td>D-05</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Elon Musk</td>
+      <td>D-05</td>
+      <td>Not Available</td>
+    </tr>
+    <tr>
+      <td>Catatan Harian Anne Frank</td>
+      <td>D-07</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Biografi Gus Dur</td>
+      <td>D-07</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td><b>Tan Malaka</b> 1897-1949</td>
+      <td>D-07</td>
+      <td>Available</td>
+    </tr>
+  </table> 
+</div>
+
+<div id="Biology" class="tabcontent">
+  <table>
+    <tr>
+      <th>Book Title</th>
+      <th>Bookshlef Number</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Biologi Pertanian</td>
+      <td>E-09</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Why Evolution Is True</td>
+      <td>E-09</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Your Inner Fish</td>
+      <td>E-09</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Kamus Biologi</td>
+      <td>E-09</td>
+      <td>Available</td>
+    </tr>
+    <tr>
+      <td>Biologi Sel & Molekuler</td>
+      <td>E-09</td>
+      <td>Available</td>
+    </tr>
+  </table> 
+</div>
+</div> 
+<!-- End of Main -->
 
 <!-- Footer -->
 
@@ -146,7 +199,29 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+
     <!-- Custom scripts -->
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+    </script>
   </body>
 </html>
